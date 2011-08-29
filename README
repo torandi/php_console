@@ -1,0 +1,6 @@
+A Console for php projects. 
+
+Tabcompletion supports:
+global functions
+global variables
+public functions and variables in variables (eg $foo->[TAB] tabcomplets among function and variables in $foo)
