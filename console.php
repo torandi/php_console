@@ -5,12 +5,7 @@
  * Written by Andreas Tarandi for NitroXy
  */
 
-/*
- * Call to include environment
- */ 
-require "includes.php";
-
-
+require dirname(__FILE__)."/includes.php";
 echo "PHP ".phpversion()."\n";
 
 $PROMPT = "php >> ";
@@ -35,12 +30,15 @@ while(true) {
 			if(trim($input) != "") {
 				readline_add_history($input);
 				$input = trim($input);
-				if($input[strlen($input)-1] == ";") {
-					$input[strlen($input)-1] = "";
+				if(strpos($input, ";") === false) {
+					$input = "print_r($input);";
+				}
+				if($input[strlen($input)-1] != ";") {
+					$input = "$input;";
 				}
 				try {
-					eval("print_r($input);");
-					echo "\n";
+					readline_write_history(".console_history");
+					eval("$input echo '\n';");
 				} catch (ErrorException $e) {
 					echo_error($e);
 				} catch (Exception $e) {
