@@ -5,7 +5,7 @@
  * Written by Andreas Tarandi for NitroXy
  */
 
-require dirname(__FILE__)."/includes.php";
+require dirname(__FILE__)."/../../includes.php";
 echo "PHP ".phpversion()."\n";
 
 $PROMPT = "php >> ";
