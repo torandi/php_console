@@ -3,6 +3,7 @@
 /**
  * PHP Console
  * Written by Andreas Tarandi for NitroXy
+ * https://github.com/torandi/php_console
  */
 
 require dirname(__FILE__)."/../../includes.php";
