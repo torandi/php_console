@@ -1,5 +1,5 @@
 #!/usr/bin/php
-<?
+<?php
 /**
  * PHP Console
  * Written by Andreas Tarandi for NitroXy
