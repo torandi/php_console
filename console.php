@@ -8,13 +8,20 @@
 
 $file_dir = realpath(dirname($_SERVER['SCRIPT_FILENAME']));
 
-if(file_exists("$file_dir/includes.php")) {
+if(file_exists("$file_dir/console_include.php")) {
+	require "$file_dir/console_include.php";
+} else if(file_exists(dirname(__FILE__)."/console_include.php")) {
+	$file_dir = dirname(__FILE__);
+	require "$file_dir/console_include.php";
+
+} else if(file_exists("$file_dir/includes.php")) {
 	require "$file_dir/includes.php";
 } else if(file_exists(dirname(__FILE__)."/includes.php")) {
 	$file_dir = dirname(__FILE__);
 	require "$file_dir/includes.php";
+
 } else {
-	die("Please create includes.php.\n");
+	die("Please create console_include.php.\n");
 }
 
 echo "PHP ".phpversion()."\n";
