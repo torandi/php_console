@@ -4,3 +4,7 @@ Tabcompletion supports:
 global functions
 global variables
 public functions and variables in variables (eg $foo->[TAB] tabcomplets among function and variables in $foo)
+
+Package exists on packagist, run:
+composer require torandi/php-console
+to add to your project
