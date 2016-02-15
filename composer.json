@@ -1,0 +1,10 @@
+{
+    "name": "torandi/php-console",
+    "authors": [
+        {
+            "name": "Andreas Tarandi",
+            "email": "torandi@gmail.com"
+        }
+    ],
+    "require": {},
+}
